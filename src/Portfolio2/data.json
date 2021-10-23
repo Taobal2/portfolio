@@ -1,0 +1,22 @@
+[
+     {
+          "id":"1",
+          "title":"EKO DIGITAL",
+          "Desc":"Eko Digital is a programe facilitated by Lagos State Government through the office of the Special Adviser on Education - in collaboration with Advent Management Solution and Loftyinc Allied Partners Limited - aimed at empowering Youths and young students in Lagos Primary and Secondary schools accross Lagos... ",
+          "image":"Eko.jpeg"
+     },
+
+     {
+          "id":"2",
+          "title":"MSMES INTENSIVE CAPACITY BUILDING TRAINING",
+          "Desc":"MSME capacity building... its a project sponsored by the Federal ministry of Trade and Investment to enlighten the medium scale micro entrepreneur on financial literacy, book keeping and business formation and how to get access to the Bank of Industry Loan...",
+          "image":"msmes.jpeg"
+     },
+
+     {
+          "id":"3",
+          "title":"LSETF Employability Training Programme",
+          "Desc":"The employment partnership with the (USADF) is targeted at eqquipeding 3,000 lagos residents, between the ages of 18-35years with industry relevant skills, annually, for a period of five years. The project will achieve this through the provision skills development training that will last between 4-12 weeks.",
+          "image":"lsetf.jpeg"
+     }
+]
