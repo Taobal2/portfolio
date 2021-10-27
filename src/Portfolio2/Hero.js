@@ -35,6 +35,11 @@ const Sub = styled.div`
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 700px) {
+    font-size: 12px;
+    margin-left: 10px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -43,6 +48,11 @@ const Container = styled.div`
   background-color: #213043;
   color: white;
   padding-top: 100px;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -50,6 +60,14 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img`
@@ -58,24 +76,64 @@ const Image = styled.img`
   border-radius: 8px;
   margin-left: 70px;
   object-fit: cover;
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    height: 410px;
+    margin-left: 0;
+    margin: 8px 0;
+  }
 `;
 const Content = styled.div`
   width: 650px;
   height: 500px;
   margin: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-top: 15px;
+  }
 `;
 const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 700px) {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
 `;
 const Description = styled.div`
   font-size: 26px;
   line-height: 40px;
   margin-bottom: 40px;
   font-family: poppins;
+
+  @media screen and (max-width: 700px) {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+  }
 `;
-const Div = styled.div``;
+const Div = styled.div`
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+`;
 const Button = styled.button`
   width: 100px;
   height: 40px;
@@ -94,5 +152,12 @@ const Button = styled.button`
     cursor: pointer;
     transform: scale(1.04);
     background-color: #8080c0;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin: 0 5px;
   }
 `;

@@ -22,6 +22,12 @@ const Videos = styled.video`
   border-radius: 10px;
   margin: 20px auto;
   object-fit: contain;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -32,4 +38,9 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+  }
 `;

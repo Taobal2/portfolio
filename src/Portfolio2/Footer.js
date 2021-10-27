@@ -54,6 +54,13 @@ const Twitter = styled.a`
       transform: scale(1.3);
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .MuiSvgIcon-root {
+      margin: 0 10px;
+      font-size: 30px;
+    }
+  }
 `;
 const Instagram = styled.a`
   .MuiSvgIcon-root {
@@ -66,6 +73,13 @@ const Instagram = styled.a`
     :hover {
       cursor: pointer;
       transform: scale(1.3);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .MuiSvgIcon-root {
+      margin: 0 10px;
+      font-size: 30px;
     }
   }
 `;
@@ -82,6 +96,13 @@ const Facebook = styled.a`
       transform: scale(1.3);
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .MuiSvgIcon-root {
+      margin: 0 10px;
+      font-size: 30px;
+    }
+  }
 `;
 
 const Image = styled.img`
@@ -92,11 +113,22 @@ const Image = styled.img`
   margin-right: 350px;
   object-fit: contain;
   background-color: white;
+
+  @media screen and (max-width: 700px) {
+    width: 80px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 `;
 const Text = styled.div`
   font-size: 18px;
   color: white;
   margin-top: 15px;
+
+  @media screen and (max-width: 700px) {
+    font-size: 12px;
+  }
 `;
 const Social = styled.div`
   width: 250px;
@@ -105,6 +137,11 @@ const Social = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    width: 150px;
+    height: 20px;
+  }
 `;
 
 const Last = styled.div`
@@ -115,6 +152,13 @@ const Last = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 150px;
+
+  @media screen and (max-width: 700px) {
+    width: 200px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
 `;
 
 const Container = styled.div`
@@ -126,6 +170,11 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+
+  @media screen and (max-width: 700px) {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -133,4 +182,12 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

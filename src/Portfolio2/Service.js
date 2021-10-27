@@ -25,6 +25,9 @@ export default Service;
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
+
+  @media screen and (max-width: 700px) {
+  }
 `;
 const Title = styled.div`
   font-size: 17px;
@@ -32,6 +35,9 @@ const Title = styled.div`
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 7px;
+
+  @media screen and (max-width: 700px) {
+  }
 `;
 const Project = styled.div`
   display: flex;
@@ -39,6 +45,9 @@ const Project = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 10px;
+
+  @media screen and (max-width: 700px) {
+  }
 `;
 const Card = styled.div`
   width: 400px;
@@ -55,12 +64,27 @@ const Card = styled.div`
     cursor: pointer;
     transform: scale(1.03);
   }
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    height: 100%;
+    transition: all 400ms;
+    transform: scale(1);
+
+    :hover {
+      cursor: pointer;
+      transform: scale(1.01);
+    }
+  }
 `;
 const Image = styled.img`
   width: 100%;
   height: 61%;
   border-radius: 5px 5px 0 0;
   object-fit: cover;
+
+  @media screen and (max-width: 700px) {
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -71,6 +95,12 @@ const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+  }
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -79,4 +109,9 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+  }
 `;

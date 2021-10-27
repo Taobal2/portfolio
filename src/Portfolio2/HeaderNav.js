@@ -6,11 +6,13 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-
 import { animateScroll as Scroll, Link } from "react-scroll";
+import MenuIcon from "@mui/icons-material/Menu";
+import SideBar from "./SideBar";
 
 const HeaderNav = ({ bg }) => {
   const [toggle, setToggle] = useState(false);
+  const [sideber, setSideber] = useState(false);
 
   const showScroll = () => {
     const height = window.scrollY;
@@ -21,50 +23,98 @@ const HeaderNav = ({ bg }) => {
       setToggle(false);
     }
   };
-
   window.addEventListener("scroll", showScroll);
+
+  const onHandle = () => {
+    setSideber(!sideber);
+  };
   return (
-    <Container bg={bg}>
-      <Wrapper>
-        <Logo
-          src={image}
-          onClick={() => {
-            Scroll.scrollToTop();
-          }}
-        />
-        <Navigation>
-          <NavIcon to="Home" smooth={true} offset={-100} duration={500}>
-            <HomeIcon />
-            <span>Home</span>
-          </NavIcon>
-          <NavIcon to="service" smooth={true} offset={-100} duration={500}>
-            <AccountCircleIcon />
-            <span>Service</span>
-          </NavIcon>
-          <NavIcon to="video" smooth={true} offset={-100} duration={500}>
-            <OndemandVideoIcon />
-            <span>Video</span>
-          </NavIcon>
-          <NavIcon to="contact" smooth={true} offset={-100} duration={500}>
-            <ContactMailIcon />
-            <span>Contact</span>
-          </NavIcon>
-        </Navigation>
-        <Button
-          op={toggle ? "op" : ""}
-          onClick={() => {
-            Scroll.scrollToTop();
-          }}
-        >
-          <KeyboardArrowUpIcon />
-        </Button>
-      </Wrapper>
-    </Container>
+    <MenuContainer>
+      <Container bg={bg}>
+        <Wrapper>
+          <Logo
+            src={image}
+            onClick={() => {
+              Scroll.scrollToTop();
+            }}
+          />
+          <Navigation>
+            <NavIcon to="Home" smooth={true} offset={-100} duration={500}>
+              <HomeIcon />
+              <span>Home</span>
+            </NavIcon>
+            <NavIcon to="service" smooth={true} offset={-100} duration={500}>
+              <AccountCircleIcon />
+              <span>Service</span>
+            </NavIcon>
+            <NavIcon to="video" smooth={true} offset={-100} duration={500}>
+              <OndemandVideoIcon />
+              <span>Video</span>
+            </NavIcon>
+            <NavIcon to="contact" smooth={true} offset={-100} duration={500}>
+              <ContactMailIcon />
+              <span>Contact</span>
+            </NavIcon>
+          </Navigation>
+          <Button
+            op={toggle ? "op" : ""}
+            onClick={() => {
+              Scroll.scrollToTop();
+            }}
+          >
+            <KeyboardArrowUpIcon />
+          </Button>
+        </Wrapper>
+        <MediaScreen>
+          <Logo src={image} />
+          <Menu
+            onClick={() => {
+              onHandle();
+              console.log(sideber);
+            }}
+          >
+            <MenuIcon />
+          </Menu>
+        </MediaScreen>
+      </Container>
+      {sideber ? <SideBar sideber={sideber} setSideber={setSideber} /> : null}
+    </MenuContainer>
   );
 };
 
 export default HeaderNav;
 
+const MenuContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+const MediaScreen = styled.div`
+  display: none;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+const Menu = styled.div`
+  margin-right: 20px;
+
+  .MuiSvgIcon-root {
+    font-size: 50px;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-left: 10px;
+  }
+`;
 const Button = styled.button`
   margin-right: 30px;
   height: 70px;
@@ -92,6 +142,16 @@ const Button = styled.button`
     color: #ff0000;
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: 700px) {
+    margin-right: 0px;
+    height: 40px;
+    width: 40px;
+    font-size: 10px;
+    border-radius: 50%;
+    bottom: -550px;
+    right: -20px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -106,6 +166,9 @@ const Container = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 10;
+
+  @media screen and (max-width: 700px) {
+  }
 `;
 
 const Wrapper = styled.div`
@@ -113,6 +176,10 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Logo = styled.img`
@@ -121,11 +188,21 @@ const Logo = styled.img`
   border-radius: 4px;
   margin: 0 30px;
   cursor: pointer;
-  object-fit: contain;
+  object-fit: cover;
+
+  @media screen and (max-width: 700px) {
+    margin-left: 10px;
+    width: 100px;
+    height: 60px;
+  }
 `;
 const Navigation = styled.div`
   display: flex;
   margin-left: 70px;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const NavIcon = styled(Link)`
@@ -172,5 +249,8 @@ const NavIcon = styled(Link)`
         transform: scale(1);
       }
     }
+  }
+
+  @media screen and (max-width: 700px) {
   }
 `;
