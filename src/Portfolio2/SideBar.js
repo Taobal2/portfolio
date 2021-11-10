@@ -4,7 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
-import { animateScroll as Scroll, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const SideBar = ({ setSideber, sideber }) => {
   return (
@@ -24,15 +24,42 @@ const SideBar = ({ setSideber, sideber }) => {
             <HomeIcon />
             <span>Home</span>
           </NavIcon>
-          <NavIcon to="service" smooth={true} offset={-100} duration={500}>
+          <NavIcon
+            onClick={() => {
+              console.log(sideber);
+              setSideber(false);
+            }}
+            to="service"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             <AccountCircleIcon />
             <span>Service</span>
           </NavIcon>
-          <NavIcon to="video" smooth={true} offset={-100} duration={500}>
+          <NavIcon
+            onClick={() => {
+              console.log(sideber);
+              setSideber(false);
+            }}
+            to="video"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             <OndemandVideoIcon />
             <span>Video</span>
           </NavIcon>
-          <NavIcon to="contact" smooth={true} offset={-100} duration={500}>
+          <NavIcon
+            onClick={() => {
+              console.log(sideber);
+              setSideber(false);
+            }}
+            to="contact"
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             <ContactMailIcon />
             <span>Contact</span>
           </NavIcon>
@@ -80,6 +107,7 @@ const NavIcon = styled(Link)`
 
 const Container = styled.div`
   display: none;
+  z-index: 10;
 
   @media screen and (max-width: 700px) {
     display: flex;
@@ -88,6 +116,7 @@ const Container = styled.div`
     background-color: #1c1924;
     color: white;
     padding-top: 100px;
+    position: fixed;
   }
 `;
 const Wrapper = styled.div`

@@ -75,6 +75,14 @@ const HeaderNav = ({ bg }) => {
           >
             <MenuIcon />
           </Menu>
+          <Button
+            op={toggle ? "op" : ""}
+            onClick={() => {
+              Scroll.scrollToTop();
+            }}
+          >
+            <KeyboardArrowUpIcon />
+          </Button>
         </MediaScreen>
       </Container>
       {sideber ? <SideBar sideber={sideber} setSideber={setSideber} /> : null}
@@ -112,7 +120,7 @@ const Menu = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 `;
 const Button = styled.button`
@@ -121,7 +129,6 @@ const Button = styled.button`
   width: 70px;
   outine: none;
   border: 0;
-  color: #000000;
   font-size: 15px;
   font-weight: bold;
   background-color: antiquewhite;
@@ -134,7 +141,11 @@ const Button = styled.button`
   transition: all 400ms;
   position: absolute;
   bottom: -550px;
-  right: -20px;
+  right: 0px;
+
+  .MuiSvgIcon-root {
+    color: red;
+  }
 
   :hover {
     cursor: pointer;
@@ -145,12 +156,13 @@ const Button = styled.button`
 
   @media screen and (max-width: 700px) {
     margin-right: 0px;
-    height: 40px;
-    width: 40px;
+    height: 70px;
+    width: 70px;
     font-size: 10px;
     border-radius: 50%;
+    position: absolute;
     bottom: -550px;
-    right: -20px;
+    right: 10px;
   }
 `;
 const Container = styled.div`
@@ -165,7 +177,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
-  z-index: 10;
+  z-index: 50;
 
   @media screen and (max-width: 700px) {
   }
@@ -249,8 +261,5 @@ const NavIcon = styled(Link)`
         transform: scale(1);
       }
     }
-  }
-
-  @media screen and (max-width: 700px) {
   }
 `;
