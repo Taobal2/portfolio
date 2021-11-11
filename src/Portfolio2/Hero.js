@@ -135,7 +135,7 @@ const Div = styled.div`
   }
 `;
 const Button = styled.button`
-  width: 100px;
+  width: 120px;
   height: 40px;
   border-radius: 20px;
   background-color: #38aaa4;
@@ -155,7 +155,7 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 700px) {
-    width: 80px;
+    width: 100px;
     height: 30px;
     font-size: 15px;
     margin: 0 5px;

@@ -78,7 +78,7 @@ const Navigation = styled.div`
 const NavIcon = styled(Link)`
   display: flex;
   align-items: center;
-  margin: 20px 10px;
+  margin: 30px 15px;
 
   .MuiSvgIcon-root {
     font-size: 20px;
@@ -112,10 +112,10 @@ const Container = styled.div`
   @media screen and (max-width: 700px) {
     display: flex;
     width: 100%;
-    height: 250px;
+    height: 260px;
     background-color: #1c1924;
     color: white;
-    padding-top: 100px;
+    padding-top: 50px;
     position: fixed;
   }
 `;

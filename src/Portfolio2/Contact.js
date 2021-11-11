@@ -194,7 +194,6 @@ const Button = styled.button`
 
 const Container = styled.div`
   width: 100%;
-  min-height: 90vh;
   height: 100%;
   background-color: #400080;
 
@@ -205,10 +204,11 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 
   @media screen and (max-width: 700px) {
   }

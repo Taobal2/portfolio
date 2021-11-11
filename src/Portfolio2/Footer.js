@@ -173,7 +173,6 @@ const Container = styled.div`
 
   @media screen and (max-width: 700px) {
     font-size: 15px;
-    margin-bottom: 10px;
   }
 `;
 

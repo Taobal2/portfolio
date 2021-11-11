@@ -31,7 +31,6 @@ const Videos = styled.video`
 `;
 const Container = styled.div`
   width: 100%;
-  min-height: 80vh;
   height: 100%;
   background-color: #000000;
 `;
@@ -41,6 +40,6 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 100%;
-    height: 100%;
+    height: 500px;
   }
 `;

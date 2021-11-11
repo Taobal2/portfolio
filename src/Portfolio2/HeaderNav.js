@@ -112,7 +112,7 @@ const Menu = styled.div`
   margin-right: 20px;
 
   .MuiSvgIcon-root {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   :hover {
@@ -161,7 +161,7 @@ const Button = styled.button`
     font-size: 10px;
     border-radius: 50%;
     position: absolute;
-    bottom: -550px;
+    bottom: -480px;
     right: 10px;
   }
 `;
@@ -172,7 +172,7 @@ const Container = styled.div`
   background-color: ${({ bg }) =>
     bg ? "rgba( 28, 25, 36, 0.35 )" : "#1C1924"};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -180,6 +180,7 @@ const Container = styled.div`
   z-index: 50;
 
   @media screen and (max-width: 700px) {
+    height: 50px;
   }
 `;
 
@@ -204,8 +205,8 @@ const Logo = styled.img`
 
   @media screen and (max-width: 700px) {
     margin-left: 10px;
-    width: 100px;
-    height: 60px;
+    width: 70px;
+    height: 35px;
   }
 `;
 const Navigation = styled.div`
