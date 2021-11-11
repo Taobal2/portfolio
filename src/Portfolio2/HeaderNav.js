@@ -161,7 +161,7 @@ const Button = styled.button`
     font-size: 10px;
     border-radius: 50%;
     position: absolute;
-    bottom: -480px;
+    bottom: -520px;
     right: 10px;
   }
 `;
@@ -174,13 +174,12 @@ const Container = styled.div`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(7px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 50;
 
   @media screen and (max-width: 700px) {
-    height: 50px;
+    height: 60px;
   }
 `;
 

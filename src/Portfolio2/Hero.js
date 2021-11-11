@@ -52,6 +52,7 @@ const Container = styled.div`
   @media screen and (max-width: 700px) {
     width: 100%;
     height: 100%;
+    padding-top: 0;
   }
 `;
 const Wrapper = styled.div`
