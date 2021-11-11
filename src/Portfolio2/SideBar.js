@@ -73,10 +73,6 @@ export default SideBar;
 
 const Navigation = styled.div`
   margin-top: 20px;
-
-  @media screen and (max-width: 700px) {
-    font-size: 36px;
-  }
 `;
 
 const NavIcon = styled(Link)`
@@ -90,7 +86,7 @@ const NavIcon = styled(Link)`
   }
 
   span {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
   }
