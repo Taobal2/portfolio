@@ -28,7 +28,7 @@ const Footer = () => {
               <InstagramIcon />
             </Instagram>
 
-            <Twitter href="https://web.facebook.com" rel="" target="blank">
+            <Twitter href="" rel="" target="blank">
               <TwitterIcon />
             </Twitter>
           </Social>

@@ -8,6 +8,7 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { animateScroll as Scroll, Link } from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from "@mui/icons-material/Clear";
 import SideBar from "./SideBar";
 
 const HeaderNav = ({ bg }) => {
@@ -73,7 +74,7 @@ const HeaderNav = ({ bg }) => {
               console.log(sideber);
             }}
           >
-            <MenuIcon />
+            {sideber ? <ClearIcon /> : <MenuIcon />}
           </Menu>
           <Button
             op={toggle ? "op" : ""}
